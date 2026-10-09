@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta a [Nombre de la Gatita] 🐾</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        h1.title {
+            text-align: center;
+            color: #ff6b81;
+            margin-bottom: 40px;
+        }
+
+        /* Diseño de la Línea del Tiempo Vertical */
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #ffb8b8;
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            border-radius: 5px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid #ff6b81;
+            border-radius: 50%;
+            top: 15px;
+            left: -28px;
+            z-index: 1;
+        }
+        
+        /* Contenido de cada Hito con el Cuadrado Multimedia */
+        .content {
+            padding: 20px;
+            background-color: #fff0f3;
+            border-radius: 8px;
+            border-left: 5px solid #ff6b81;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .text-content h3 {
+            margin-top: 0;
+            color: #d63031;
+        }
+        
+        /* Cuadrado para imagen o video */
+        .media-square {
+            width: 120px;
+            height: 120px;
+            background-color: #ffe0e6;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px dashed #ffb8b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .media-square img, .media-square video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen llene el cuadrado sin deformarse */
+            border: none;
+        }
+
+        /* Hacer que se vea bien en celulares (el cuadrado pasa abajo del texto) */
+        @media (max-width: 500px) {
+            .content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .media-square {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* Flyer, Necesidades y Teléfono */
+        .flyer-section {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px dashed #ffb8b8;
+        }
+        .flyer-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .needs-section {
+            background-color: #f1f8ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .needs-section h2 {
+            color: #2e86ab;
+            text-align: center;
+            margin-top: 0;
+        }
+        .needs-section ul {
+            font-size: 1.1em;
+            line-height: 1.8;
+            list-style-type: none;
+            padding: 0;
+        }
+        .needs-section li {
+            margin-bottom: 10px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            border: 2px solid #81c784;
+        }
+        .contact p {
+            font-size: 1.2em;
+            color: #2e7d32;
+        }
+        .contact h1 {
+            font-size: 3.5em;
+            margin: 10px 0;
+            color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">🐾 La Historia de [Nombre de la Gatita]</h1>
+
+    <!-- INICIO DE LA LÍNEA DEL TIEMPO -->
+    <div class="timeline">
+        
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>1. El Rescate</h3>
+                    <p>Rescatada de una situación de maltrato severo. Estaba muy asustada, pero desde el primer momento demostró unas inmensas ganas de vivir.</p>
+                </div>
+                <!-- Cuadrado 1 -->
+                <div class="media-square">
+                    <img src="https://via.placeholder.com/150x150.png?text=Foto+1" alt="Foto rescate">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>2. Primeros Cuidados Médicos</h3>
+                    <p>Recibió atención veterinaria de urgencia. Se trataron sus heridas, se le dio alimento especial y pasó sus primeras noches a salvo.</p>
+                </div>
+                <!-- Cuadrado 2 -->
+                <div class="media-square">
+                    <img src="https://via.placeholder.com/150x150.png?text=Foto+2" alt="Foto médicos">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>3. Empezando a Confiar</h3>
+                    <p>Después de semanas, dio su primer ronroneo. Empezó a entender que las manos humanas también pueden dar amor, no solo lastimar.</p>
+                </div>
+                <!-- Cuadrado 3 (Ejemplo con un video) -->
+                <div class="media-square">
+                    <!-- Para usar un video, borra la etiqueta <img> de abajo y quita los comentarios de la etiqueta <video> -->
+                    <img src="https://via.placeholder.com/150x150.png?text=Video" alt="Video ronroneo">
+                    <!-- <video src="ruta-de-tu-video.mp4" autoplay loop muted playsinline></video> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>4. Alta Médica</h3>
+                    <p>¡Totalmente sana! Superó todas sus heridas físicas, recibió sus vacunas, fue desparasitada y esterilizada.</p>
+                </div>
+                <!-- Cuadrado 4 -->
+                <div class="media-square">
+                    <img src="https://via.placeholder.com/150x150.png?text=Foto+4" alt="Foto alta médica">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>5. Socialización</h3>
+                    <p>Empezó a convivir con otros animalitos de forma tranquila y a explorar su hogar temporal con mucha curiosidad.</p>
+                </div>
+                <!-- Cuadrado 5 -->
+                <div class="media-square">
+                    <img src="https://via.placeholder.com/150x150.png?text=Foto+5" alt="Foto juegos">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="content">
+                <div class="text-content">
+                    <h3>6. ¡Lista para adoptar!</h3>
+                    <p>Sus heridas sanaron y su corazón también. Hoy es una gatita amorosa que espera la oportunidad de tener una familia definitiva.</p>
+                </div>
+                <!-- Cuadrado 6 -->
+                <div class="media-square">
+                    <img src="https://via.placeholder.com/150x150.png?text=Foto+6" alt="Foto lista para adoptar">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- FIN DE LA LÍNEA DEL TIEMPO -->
+
+    <!-- SECCIÓN DEL FLYER -->
+    <div class="flyer-section">
+        <h2>Ayúdala a encontrar su hogar 🏡</h2>
+        <img src="https://via.placeholder.com/600x800.png?text=Coloca+el+link+de+tu+Flyer+Aqui" alt="Flyer de Adopción">
+    </div>
+
+    <!-- SECCIÓN DE NECESIDADES -->
+    <div class="needs-section">
+        <h2>❤️ Lo que ella necesita en su nueva familia:</h2>
+        <ul>
+            <li>🏠 <strong>Paciencia:</strong> Requiere un hogar tranquilo sin ruidos bruscos mientras se adapta a su nuevo entorno.</li>
+            <li>🧸 <strong>Amor y respeto:</strong> Le encanta el cariño, pero hay que dejar que ella se acerque a su propio ritmo.</li>
+            <li>🥩 <strong>Alimentación:</strong> Come croquetas premium y sobres de comida húmeda diariamente.</li>
+            <li>🐱 <strong>Compañía:</strong> Puede convivir con otros gatos o perritos que sean tranquilos y amigables.</li>
+            <li>🔒 <strong>Seguridad:</strong> Es indispensable contar con mallas o redes en ventanas/balcones para evitar accidentes.</li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <div class="contact">
+        <p>Si estás listo para darle el amor que merece, escríbenos:</p>
+        <h1>+51 999 888 777</h1>
+    </div>
+
+</div>
+
+</body>
+</html>
